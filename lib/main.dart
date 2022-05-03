@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scratchpad/modules/counter/counter.dart';
-import 'package:scratchpad/modules/mainscreen/mainscreen.dart';
-import 'package:scratchpad/modules/stopwatch/stopwatch_list.dart';
+import 'package:scratchpad/config/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,12 +27,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
       ),
       initialRoute: '/',
-      routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => const MainScreen(),
-        '/stopwatch': (context) => const StopwatchListWidget(),
-        '/counter': (context) => const CounterWidget(title: "Counter"),
-      },
+      routes: routes,
     );
   }
 }
